@@ -30,6 +30,8 @@ const muro = {
     pintado: false
 }
 
-const muroConstruido = construir(muro)
-const muroConstruido = aplanar(muroConstruido)
+const muroConstruido = construir(muro, aplanar)
+const muroConstruido = aplanar(muroConstruido, pintar)
 const muroConstruido = pintar(muroAplanado)
+
+console.log(muroPintado)

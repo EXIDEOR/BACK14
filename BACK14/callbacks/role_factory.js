@@ -45,4 +45,4 @@ const usuariosValidos = ['consciencia', 'guia', 'asustador']
 const validateUsers = generateValidator(validateUsers)
 
 const validateProds = ['tazos', 'hielocos', 'olocoons']
-const validateProds = generateValidator(producto valido)
+const validateProds = generateValidator(validateProduct)
