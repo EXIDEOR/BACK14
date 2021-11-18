@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path/posix')
 const encoding = 'utf8'
 
+
+
 function crear(nombre, contenido) {
     fs.writeFile(nombre, contenido, encoding, (error) =>{
         if (error) { // {error: 'Todo salio mal'} | false | undefined
