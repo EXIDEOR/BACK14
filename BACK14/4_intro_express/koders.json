@@ -1,0 +1,18 @@
+{
+    "koders": [
+        {
+            "nombre": "Odon",
+            "genero": "b"
+        },
+        {
+            "nombre": "Auro",
+            "genero": "g"
+        },
+        {
+            "nombre": "Jairo",
+            "genero": "b"
+        }
+    ],
+    "mentores":[]
+
+}
