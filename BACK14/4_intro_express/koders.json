@@ -2,15 +2,15 @@
     "koders": [
         {
             "nombre": "Odon",
-            "genero": "b"
+            "genero": "B"
         },
         {
             "nombre": "Auro",
-            "genero": "g"
+            "genero": "G"
         },
         {
             "nombre": "Jairo",
-            "genero": "b"
+            "genero": "B"
         }
     ],
     "mentores":[]
