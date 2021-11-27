@@ -13,6 +13,11 @@
             "genero": "B"
         }
     ],
-    "mentores":[]
+    "mentores":[
+        {
+            "nombre": "Oscar",
+            "genero": "B"
+        }
+    ]
 
 }
