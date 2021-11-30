@@ -1,0 +1,25 @@
+{
+    "mentores":[
+        {
+            "nombre": "Oscar",
+            "genero": "B"
+        },
+        {
+            "nombre": "Iván",
+            "genero": "B"
+        },
+        {
+            "nombre": "Alan",
+            "genero": "B"
+        },
+        {
+            "nombre": "Elvira",
+            "genero": "G"
+        },
+        {
+            "nombre": "Alejandra",
+            "genero": "B"
+        }
+    ]
+
+}
