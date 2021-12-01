@@ -1,13 +1,15 @@
+require('dotenv').config()
+
 const express = require('express')
 const mongoose = require('mongoose')
 const Koder = require('./koder.model')
 
-const PORT = 8080
+const PORT = process.env.PORT
 
-const DB_USER = 'fegoMDB'
-const DB_PASSWORD = 'it8JYLhDzVAC6mp'
-const DB_HOST = 'cluster0.nqo5u.mongodb.net'
-const DB_NAME = 'kodemia'
+const DB_USER = process.env.DB_USER
+const DB_PASSWORD = process.env.DB_PASSWORD
+const DB_HOST = process.env.DB_HOST
+const DB_NAME = process.env.DB_NAME
 
 const URL = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`
 
@@ -19,14 +21,52 @@ app.get('/', (req, res) => {
 
 app.get('/koders', async (req, res) => {
     try {
-        const koders = await Koder.find({})
-        res.json(koders)
+        const { gender, age } = request.query
+        
+        const filters = {}
 
+        if (gender) filters.gender = gender
+        if (age) filters.age = age
+
+        //Cargar todos los koders
+        console.log('filtros: ', filters)
+        
+        const koders = await Koder.find({filters})
+        
+        res.json(koders)
     }catch(error) {
+        console.error(error)
         res.statusCode = 500
-        res.json({ success: true})
+        res.end()
     }
 
+})
+
+app.post('/koders', async (req, res) => {
+    try {
+        const { name, lastName, gender, age } = req.body
+
+        const newKoder = await Koder.create({
+            name,
+            lastName,
+            gender,
+            age
+        })
+
+        res.statusCode = 201
+        res.json({
+            success: true,
+            data: {
+                koder: newKoder,
+            },
+        })
+    }catch (error) {
+        res.statusCode = 400
+        res.json({
+            success: false,
+            error,
+        })
+    }
 })
 
 mongoose
