@@ -1,0 +1,20 @@
+{
+  "name": "test_14js",
+  "version": "1.0.0",
+  "description": "testing jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "jest",
+    "testing"
+  ],
+  "author": "Kodemia 14JS",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
